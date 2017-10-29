@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 29, 2017 at 02:35 AM
+-- Generation Time: Oct 29, 2017 at 02:55 AM
 -- Server version: 5.7.14
 -- PHP Version: 7.0.10
 
@@ -38,9 +38,9 @@ CREATE TABLE `chamado` (
   `hora` time NOT NULL,
   `data` date NOT NULL,
   `obsFinal` varchar(200) COLLATE utf8_unicode_ci NOT NULL DEFAULT 'Nenhuma',
-  `horaFinal` time NOT NULL,
-  `dataFinal` date NOT NULL,
-  `custo` double NOT NULL
+  `horaFinal` time DEFAULT NULL,
+  `dataFinal` date DEFAULT NULL,
+  `custo` double DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
@@ -49,7 +49,8 @@ CREATE TABLE `chamado` (
 
 INSERT INTO `chamado` (`id`, `situacao`, `urgencia`, `descricao`, `id_Solic`, `id_Tec`, `hora`, `data`, `obsFinal`, `horaFinal`, `dataFinal`, `custo`) VALUES
 (1, 'finalizado', 'alta', 'Atualizar Office', 2, 1, '18:56:48', '2014-11-17', '-', '22:59:06', '2017-10-28', 0),
-(2, 'finalizado', 'alta', 'Trocar teclado', 7, 1, '19:29:41', '2014-11-17', '-', '22:59:13', '2017-10-28', 0);
+(2, 'finalizado', 'alta', 'Trocar teclado', 7, 1, '19:29:41', '2014-11-17', '-', '22:59:13', '2017-10-28', 0),
+(3, 'finalizado', 'média', 'Instalar Windows', 2, 1, '00:51:14', '2017-10-29', 'nenhuma	', '00:52:21', '2017-10-29', 0);
 
 -- --------------------------------------------------------
 
